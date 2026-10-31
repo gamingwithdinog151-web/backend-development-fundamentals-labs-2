@@ -1,4 +1,4 @@
-# Lab 2: SQLite Database and CRUD Routes Using Node.js and Express
+﻿# Lab 2: SQLite Database and CRUD Routes Using Node.js and Express
 
 ---
 
@@ -8,7 +8,7 @@
 |-------------------------|----------------------------------------------|
 | **Student Name**        | Naga Manikanta Addaguri                      |
 | **Registration Number** | N25H03A1334                                  |
-| **Course**              | CSE – Gen AI                                 |
+| **Course**              | CSE â€“ Gen AI                                 |
 | **College**             | NIAT                                         |
 
 ---
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS book (
 
 ### Default Seed Data (9 Books)
 
-| ID | Title | Author | Price (₹) | Pages |
+| ID | Title | Author | Price (â‚¹) | Pages |
 |---|---|---|---|---|
 | 1 | The Pragmatic Programmer | David Thomas | 499 | 352 |
 | 2 | Clean Code | Robert C. Martin | 450 | 464 |
@@ -113,9 +113,9 @@ CREATE TABLE IF NOT EXISTS book (
 ### Database Verification Screenshot
 - **Inspection Tool:** DB Browser for SQLite
 - **Database File:** `database.db`
-- **Image URL / Path:** [screenshots/database-verification.png](screenshots/database-verification.png)
+- **Image URL / Path:** [LAB%202/database-verification.png](LAB%202/database-verification.png)
 
-[![Database Verification](screenshots/database-verification.png)](screenshots/database-verification.png)
+[![Database Verification](LAB%202/database-verification.png)](LAB%202/database-verification.png)
 
 ---
 
@@ -123,22 +123,22 @@ CREATE TABLE IF NOT EXISTS book (
 
 ```
 lab-report-2/
-├── app.js               # Express application with routes and database initialization
-├── database.db          # Embedded SQLite database file (created automatically)
-├── initDB.sql           # SQL schema reference and seed queries
-├── package.json         # Project manifests, dependencies, and lifecycle scripts
-├── package-lock.json    # Deterministic dependency tree lockfile
-├── .gitignore           # Ignores node_modules, database.db, and log files
-├── test-api.js          # Automated end-to-end CRUD test script
-├── verify-db.js         # Quick terminal database verification utility
-├── README.md            # Comprehensive laboratory documentation
-└── screenshots/         # Captured test verification screenshots
-    ├── get-all-books.png
-    ├── get-book-by-id.png
-    ├── post-add-book.png
-    ├── put-update-book.png
-    ├── delete-book.png
-    └── database-verification.png
+â”œâ”€â”€ app.js               # Express application with routes and database initialization
+â”œâ”€â”€ database.db          # Embedded SQLite database file (created automatically)
+â”œâ”€â”€ initDB.sql           # SQL schema reference and seed queries
+â”œâ”€â”€ package.json         # Project manifests, dependencies, and lifecycle scripts
+â”œâ”€â”€ package-lock.json    # Deterministic dependency tree lockfile
+â”œâ”€â”€ .gitignore           # Ignores node_modules, database.db, and log files
+â”œâ”€â”€ test-api.js          # Automated end-to-end CRUD test script
+â”œâ”€â”€ verify-db.js         # Quick terminal database verification utility
+â”œâ”€â”€ README.md            # Comprehensive laboratory documentation
+â””â”€â”€ LAB%202/         # Captured test verification screenshots
+    â”œâ”€â”€ get-all-books.png
+    â”œâ”€â”€ get-book-by-id.png
+    â”œâ”€â”€ post-add-book.png
+    â”œâ”€â”€ put-update-book.png
+    â”œâ”€â”€ delete-book.png
+    â””â”€â”€ database-verification.png
 ```
 
 ---
@@ -196,7 +196,7 @@ http://localhost:3000
 - **Endpoint URL:** `http://localhost:3000/books/`
 - **Description:** Retrieves all book records currently stored in the SQLite database.
 - **Success Status Code:** `200 OK`
-- **Screenshot URL / Path:** [screenshots/get-all-books.png](screenshots/get-all-books.png)
+- **Screenshot URL / Path:** [LAB%202/get-all-books.png](LAB%202/get-all-books.png)
 
 **Response Payload:**
 ```json
@@ -219,7 +219,7 @@ http://localhost:3000
 ```
 
 #### Screenshot: GET All Books
-[![GET All Books](screenshots/get-all-books.png)](screenshots/get-all-books.png)
+[![GET All Books](LAB%202/get-all-books.png)](LAB%202/get-all-books.png)
 
 ---
 
@@ -229,7 +229,7 @@ http://localhost:3000
 - **Description:** Retrieves a single book by its unique primary key ID.
 - **Success Status Code:** `200 OK`
 - **Error Status Code:** `404 Not Found` (when the requested ID is not present)
-- **Screenshot URL / Path:** [screenshots/get-book-by-id.png](screenshots/get-book-by-id.png)
+- **Screenshot URL / Path:** [LAB%202/get-book-by-id.png](LAB%202/get-book-by-id.png)
 
 **Response Payload (200 OK):**
 ```json
@@ -243,7 +243,7 @@ http://localhost:3000
 ```
 
 #### Screenshot: GET Book by ID
-[![GET Book By ID](screenshots/get-book-by-id.png)](screenshots/get-book-by-id.png)
+[![GET Book By ID](LAB%202/get-book-by-id.png)](LAB%202/get-book-by-id.png)
 
 ---
 
@@ -254,7 +254,7 @@ http://localhost:3000
 - **Description:** Validates incoming request body fields and inserts a new book record.
 - **Success Status Code:** `201 Created`
 - **Error Status Code:** `400 Bad Request` (when required fields are missing)
-- **Screenshot URL / Path:** [screenshots/post-add-book.png](screenshots/post-add-book.png)
+- **Screenshot URL / Path:** [LAB%202/post-add-book.png](LAB%202/post-add-book.png)
 
 **Request Payload:**
 ```json
@@ -278,7 +278,7 @@ http://localhost:3000
 ```
 
 #### Screenshot: POST Add Book
-[![POST Add Book](screenshots/post-add-book.png)](screenshots/post-add-book.png)
+[![POST Add Book](LAB%202/post-add-book.png)](LAB%202/post-add-book.png)
 
 ---
 
@@ -289,7 +289,7 @@ http://localhost:3000
 - **Description:** Updates details (title, author, price, pages) of an existing book identified by ID.
 - **Success Status Code:** `200 OK`
 - **Error Status Code:** `404 Not Found` (when the book ID does not exist)
-- **Screenshot URL / Path:** [screenshots/put-update-book.png](screenshots/put-update-book.png)
+- **Screenshot URL / Path:** [LAB%202/put-update-book.png](LAB%202/put-update-book.png)
 
 **Request Payload:**
 ```json
@@ -313,7 +313,7 @@ http://localhost:3000
 ```
 
 #### Screenshot: PUT Update Book
-[![PUT Update Book](screenshots/put-update-book.png)](screenshots/put-update-book.png)
+[![PUT Update Book](LAB%202/put-update-book.png)](LAB%202/put-update-book.png)
 
 ---
 
@@ -323,7 +323,7 @@ http://localhost:3000
 - **Description:** Removes a book record permanently from the database.
 - **Success Status Code:** `200 OK`
 - **Error Status Code:** `404 Not Found` (when the book ID does not exist)
-- **Screenshot URL / Path:** [screenshots/delete-book.png](screenshots/delete-book.png)
+- **Screenshot URL / Path:** [LAB%202/delete-book.png](LAB%202/delete-book.png)
 
 **Response Payload (200 OK):**
 ```json
@@ -333,7 +333,7 @@ http://localhost:3000
 ```
 
 #### Screenshot: DELETE Book
-[![DELETE Book](screenshots/delete-book.png)](screenshots/delete-book.png)
+[![DELETE Book](LAB%202/delete-book.png)](LAB%202/delete-book.png)
 
 ---
 
@@ -343,61 +343,61 @@ All screenshots captured during testing are cataloged below with direct clickabl
 
 | # | Operation / Topic | Method | Target / Request URL | Status | Screenshot File & Link |
 |---|---|---|---|---|---|
-| 1 | **Database Verification** | — | `database.db` (DB Browser for SQLite) | Verified | [screenshots/database-verification.png](screenshots/database-verification.png) |
-| 2 | **GET All Books** | `GET` | `http://localhost:3000/books/` | `200 OK` | [screenshots/get-all-books.png](screenshots/get-all-books.png) |
-| 3 | **GET Book by ID** | `GET` | `http://localhost:3000/books/1/` | `200 OK` | [screenshots/get-book-by-id.png](screenshots/get-book-by-id.png) |
-| 4 | **POST Add Book** | `POST` | `http://localhost:3000/books/` | `201 Created` | [screenshots/post-add-book.png](screenshots/post-add-book.png) |
-| 5 | **PUT Update Book** | `PUT` | `http://localhost:3000/books/11/` | `200 OK` | [screenshots/put-update-book.png](screenshots/put-update-book.png) |
-| 6 | **DELETE Book** | `DELETE` | `http://localhost:3000/books/11/` | `200 OK` | [screenshots/delete-book.png](screenshots/delete-book.png) |
+| 1 | **Database Verification** | â€” | `database.db` (DB Browser for SQLite) | Verified | [LAB%202/database-verification.png](LAB%202/database-verification.png) |
+| 2 | **GET All Books** | `GET` | `http://localhost:3000/books/` | `200 OK` | [LAB%202/get-all-books.png](LAB%202/get-all-books.png) |
+| 3 | **GET Book by ID** | `GET` | `http://localhost:3000/books/1/` | `200 OK` | [LAB%202/get-book-by-id.png](LAB%202/get-book-by-id.png) |
+| 4 | **POST Add Book** | `POST` | `http://localhost:3000/books/` | `201 Created` | [LAB%202/post-add-book.png](LAB%202/post-add-book.png) |
+| 5 | **PUT Update Book** | `PUT` | `http://localhost:3000/books/11/` | `200 OK` | [LAB%202/put-update-book.png](LAB%202/put-update-book.png) |
+| 6 | **DELETE Book** | `DELETE` | `http://localhost:3000/books/11/` | `200 OK` | [LAB%202/delete-book.png](LAB%202/delete-book.png) |
 
 ---
 
 ### Visual Gallery
 
 #### 1. SQLite Database Verification
-- **URL / Path:** [screenshots/database-verification.png](screenshots/database-verification.png)
+- **URL / Path:** [LAB%202/database-verification.png](LAB%202/database-verification.png)
 
-[![Database Verification](screenshots/database-verification.png)](screenshots/database-verification.png)
+[![Database Verification](LAB%202/database-verification.png)](LAB%202/database-verification.png)
 
 ---
 
 #### 2. GET All Books (`/books/`)
 - **Request URL:** `http://localhost:3000/books/`
-- **URL / Path:** [screenshots/get-all-books.png](screenshots/get-all-books.png)
+- **URL / Path:** [LAB%202/get-all-books.png](LAB%202/get-all-books.png)
 
-[![GET All Books](screenshots/get-all-books.png)](screenshots/get-all-books.png)
+[![GET All Books](LAB%202/get-all-books.png)](LAB%202/get-all-books.png)
 
 ---
 
 #### 3. GET Book by ID (`/books/1/`)
 - **Request URL:** `http://localhost:3000/books/1/`
-- **URL / Path:** [screenshots/get-book-by-id.png](screenshots/get-book-by-id.png)
+- **URL / Path:** [LAB%202/get-book-by-id.png](LAB%202/get-book-by-id.png)
 
-[![GET Book By ID](screenshots/get-book-by-id.png)](screenshots/get-book-by-id.png)
+[![GET Book By ID](LAB%202/get-book-by-id.png)](LAB%202/get-book-by-id.png)
 
 ---
 
 #### 4. POST Add Book (`/books/`)
 - **Request URL:** `http://localhost:3000/books/`
-- **URL / Path:** [screenshots/post-add-book.png](screenshots/post-add-book.png)
+- **URL / Path:** [LAB%202/post-add-book.png](LAB%202/post-add-book.png)
 
-[![POST Add Book](screenshots/post-add-book.png)](screenshots/post-add-book.png)
+[![POST Add Book](LAB%202/post-add-book.png)](LAB%202/post-add-book.png)
 
 ---
 
 #### 5. PUT Update Book (`/books/11/`)
 - **Request URL:** `http://localhost:3000/books/11/`
-- **URL / Path:** [screenshots/put-update-book.png](screenshots/put-update-book.png)
+- **URL / Path:** [LAB%202/put-update-book.png](LAB%202/put-update-book.png)
 
-[![PUT Update Book](screenshots/put-update-book.png)](screenshots/put-update-book.png)
+[![PUT Update Book](LAB%202/put-update-book.png)](LAB%202/put-update-book.png)
 
 ---
 
 #### 6. DELETE Book (`/books/11/`)
 - **Request URL:** `http://localhost:3000/books/11/`
-- **URL / Path:** [screenshots/delete-book.png](screenshots/delete-book.png)
+- **URL / Path:** [LAB%202/delete-book.png](LAB%202/delete-book.png)
 
-[![DELETE Book](screenshots/delete-book.png)](screenshots/delete-book.png)
+[![DELETE Book](LAB%202/delete-book.png)](LAB%202/delete-book.png)
 
 ---
 
@@ -407,15 +407,15 @@ All five endpoints were thoroughly evaluated using automated test scripts and ma
 
 | Test Case | Method | Endpoint | Expected Status | Actual Status | Result |
 |---|---|---|---|---|---|
-| Fetch all books | `GET` | `/books/` | `200 OK` | `200 OK` | ✅ Passed |
-| Fetch existing book by ID | `GET` | `/books/1/` | `200 OK` | `200 OK` | ✅ Passed |
-| Fetch non-existent book ID | `GET` | `/books/999/` | `404 Not Found` | `404 Not Found` | ✅ Passed |
-| Create valid book record | `POST` | `/books/` | `201 Created` | `201 Created` | ✅ Passed |
-| Create book with missing fields | `POST` | `/books/` | `400 Bad Request` | `400 Bad Request` | ✅ Passed |
-| Update existing book record | `PUT` | `/books/11/` | `200 OK` | `200 OK` | ✅ Passed |
-| Update non-existent book ID | `PUT` | `/books/999/` | `404 Not Found` | `404 Not Found` | ✅ Passed |
-| Delete existing book record | `DELETE` | `/books/11/` | `200 OK` | `200 OK` | ✅ Passed |
-| Delete non-existent book ID | `DELETE` | `/books/999/` | `404 Not Found` | `404 Not Found` | ✅ Passed |
+| Fetch all books | `GET` | `/books/` | `200 OK` | `200 OK` | âœ… Passed |
+| Fetch existing book by ID | `GET` | `/books/1/` | `200 OK` | `200 OK` | âœ… Passed |
+| Fetch non-existent book ID | `GET` | `/books/999/` | `404 Not Found` | `404 Not Found` | âœ… Passed |
+| Create valid book record | `POST` | `/books/` | `201 Created` | `201 Created` | âœ… Passed |
+| Create book with missing fields | `POST` | `/books/` | `400 Bad Request` | `400 Bad Request` | âœ… Passed |
+| Update existing book record | `PUT` | `/books/11/` | `200 OK` | `200 OK` | âœ… Passed |
+| Update non-existent book ID | `PUT` | `/books/999/` | `404 Not Found` | `404 Not Found` | âœ… Passed |
+| Delete existing book record | `DELETE` | `/books/11/` | `200 OK` | `200 OK` | âœ… Passed |
+| Delete non-existent book ID | `DELETE` | `/books/999/` | `404 Not Found` | `404 Not Found` | âœ… Passed |
 
 ---
 
@@ -439,4 +439,5 @@ The project successfully demonstrates the design and deployment of a modular, se
 
 ## License
 
-ISC License © 2026 Naga Manikanta Addaguri. Developed for educational laboratory assessment at NIAT.
+ISC License Â© 2026 Naga Manikanta Addaguri. Developed for educational laboratory assessment at NIAT.
+
