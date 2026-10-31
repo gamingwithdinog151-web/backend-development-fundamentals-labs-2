@@ -1,0 +1,29 @@
+{
+  "name": "lab-report-2",
+  "version": "1.0.0",
+  "description": "SQLite Database and CRUD Routes Using Node.js and Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sqlite",
+    "crud",
+    "rest-api"
+  ],
+  "author": "Naga Manikanta Addaguri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "allowScripts": {
+    "sqlite3@5.1.7": true
+  }
+}
