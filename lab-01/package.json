@@ -1,0 +1,22 @@
+{
+  "name": "lab-01",
+  "version": "1.0.0",
+  "description": "Lab 1: Node.js and Express Server",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "node server.js",
+    "test": "node test-api.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "backend",
+    "http"
+  ],
+  "author": "Naga Manikanta Addaguri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
