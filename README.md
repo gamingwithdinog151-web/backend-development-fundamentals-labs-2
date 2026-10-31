@@ -7,8 +7,8 @@
 | Field                   | Details                                      |
 |-------------------------|----------------------------------------------|
 | **Student Name**        | Naga Manikanta Addaguri                      |
-| **Registration Number** | N25H03A1334                                  |
-| **Course**              | CSE â€“ Gen AI                                 |
+| **Registration Number** | 252U1R9001                                   |
+| **Course**              | CSE       Gen AI                             |
 | **College**             | NIAT                                         |
 
 ---
