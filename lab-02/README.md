@@ -1,4 +1,4 @@
-﻿# Lab 2: SQLite Database and CRUD Routes Using Node.js and Express
+# Lab 2: SQLite Database and CRUD Routes Using Node.js and Express
 
 ---
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS book (
 
 ### Default Seed Data (9 Books)
 
-| ID | Title | Author | Price (â‚¹) | Pages |
+| ID | Title | Author | Price (₹) | Pages |
 |---|---|---|---|---|
 | 1 | The Pragmatic Programmer | David Thomas | 499 | 352 |
 | 2 | Clean Code | Robert C. Martin | 450 | 464 |
@@ -122,23 +122,23 @@ CREATE TABLE IF NOT EXISTS book (
 ## Project Structure
 
 ```
-lab-report-2/
-â”œâ”€â”€ app.js               # Express application with routes and database initialization
-â”œâ”€â”€ database.db          # Embedded SQLite database file (created automatically)
-â”œâ”€â”€ initDB.sql           # SQL schema reference and seed queries
-â”œâ”€â”€ package.json         # Project manifests, dependencies, and lifecycle scripts
-â”œâ”€â”€ package-lock.json    # Deterministic dependency tree lockfile
-â”œâ”€â”€ .gitignore           # Ignores node_modules, database.db, and log files
-â”œâ”€â”€ test-api.js          # Automated end-to-end CRUD test script
-â”œâ”€â”€ verify-db.js         # Quick terminal database verification utility
-â”œâ”€â”€ README.md            # Comprehensive laboratory documentation
-â””â”€â”€ LAB%202/         # Captured test verification screenshots
-    â”œâ”€â”€ get-all-books.png
-    â”œâ”€â”€ get-book-by-id.png
-    â”œâ”€â”€ post-add-book.png
-    â”œâ”€â”€ put-update-book.png
-    â”œâ”€â”€ delete-book.png
-    â””â”€â”€ database-verification.png
+lab-02/
+├── app.js               # Express application with routes and database initialization
+├── database.db          # Embedded SQLite database file (created automatically)
+├── initDB.sql           # SQL schema reference and seed queries
+├── package.json         # Project manifests, dependencies, and lifecycle scripts
+├── package-lock.json    # Deterministic dependency tree lockfile
+├── .gitignore           # Ignores node_modules, database.db, and log files
+├── test-api.js          # Automated end-to-end CRUD test script
+├── verify-db.js         # Quick terminal database verification utility
+├── README.md            # Comprehensive laboratory documentation
+└── LAB%202/         # Captured test verification screenshots
+    ├── get-all-books.png
+    ├── get-book-by-id.png
+    ├── post-add-book.png
+    ├── put-update-book.png
+    ├── delete-book.png
+    └── database-verification.png
 ```
 
 ---
@@ -343,7 +343,7 @@ All screenshots captured during testing are cataloged below with direct clickabl
 
 | # | Operation / Topic | Method | Target / Request URL | Status | Screenshot File & Link |
 |---|---|---|---|---|---|
-| 1 | **Database Verification** | â€” | `database.db` (DB Browser for SQLite) | Verified | [LAB%202/database-verification.png](LAB%202/database-verification.png) |
+| 1 | **Database Verification** | — | `database.db` (DB Browser for SQLite) | Verified | [LAB%202/database-verification.png](LAB%202/database-verification.png) |
 | 2 | **GET All Books** | `GET` | `http://localhost:3000/books/` | `200 OK` | [LAB%202/get-all-books.png](LAB%202/get-all-books.png) |
 | 3 | **GET Book by ID** | `GET` | `http://localhost:3000/books/1/` | `200 OK` | [LAB%202/get-book-by-id.png](LAB%202/get-book-by-id.png) |
 | 4 | **POST Add Book** | `POST` | `http://localhost:3000/books/` | `201 Created` | [LAB%202/post-add-book.png](LAB%202/post-add-book.png) |
@@ -407,15 +407,15 @@ All five endpoints were thoroughly evaluated using automated test scripts and ma
 
 | Test Case | Method | Endpoint | Expected Status | Actual Status | Result |
 |---|---|---|---|---|---|
-| Fetch all books | `GET` | `/books/` | `200 OK` | `200 OK` | âœ… Passed |
-| Fetch existing book by ID | `GET` | `/books/1/` | `200 OK` | `200 OK` | âœ… Passed |
-| Fetch non-existent book ID | `GET` | `/books/999/` | `404 Not Found` | `404 Not Found` | âœ… Passed |
-| Create valid book record | `POST` | `/books/` | `201 Created` | `201 Created` | âœ… Passed |
-| Create book with missing fields | `POST` | `/books/` | `400 Bad Request` | `400 Bad Request` | âœ… Passed |
-| Update existing book record | `PUT` | `/books/11/` | `200 OK` | `200 OK` | âœ… Passed |
-| Update non-existent book ID | `PUT` | `/books/999/` | `404 Not Found` | `404 Not Found` | âœ… Passed |
-| Delete existing book record | `DELETE` | `/books/11/` | `200 OK` | `200 OK` | âœ… Passed |
-| Delete non-existent book ID | `DELETE` | `/books/999/` | `404 Not Found` | `404 Not Found` | âœ… Passed |
+| Fetch all books | `GET` | `/books/` | `200 OK` | `200 OK` | ✅ Passed |
+| Fetch existing book by ID | `GET` | `/books/1/` | `200 OK` | `200 OK` | ✅ Passed |
+| Fetch non-existent book ID | `GET` | `/books/999/` | `404 Not Found` | `404 Not Found` | ✅ Passed |
+| Create valid book record | `POST` | `/books/` | `201 Created` | `201 Created` | ✅ Passed |
+| Create book with missing fields | `POST` | `/books/` | `400 Bad Request` | `400 Bad Request` | ✅ Passed |
+| Update existing book record | `PUT` | `/books/11/` | `200 OK` | `200 OK` | ✅ Passed |
+| Update non-existent book ID | `PUT` | `/books/999/` | `404 Not Found` | `404 Not Found` | ✅ Passed |
+| Delete existing book record | `DELETE` | `/books/11/` | `200 OK` | `200 OK` | ✅ Passed |
+| Delete non-existent book ID | `DELETE` | `/books/999/` | `404 Not Found` | `404 Not Found` | ✅ Passed |
 
 ---
 
@@ -439,5 +439,7 @@ The project successfully demonstrates the design and deployment of a modular, se
 
 ## License
 
-ISC License Â© 2026 Naga Manikanta Addaguri. Developed for educational laboratory assessment at NIAT.
+ISC License © 2026 Naga Manikanta Addaguri. Developed for educational laboratory assessment at NIAT.
+
+
 
